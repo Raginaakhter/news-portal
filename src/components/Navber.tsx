@@ -10,6 +10,7 @@ import {
 } from './ui/navigation-menu'
 import { Switch } from './ui/switch'
 import { Button } from "@/components/ui/button"
+import { IoMdMenu } from "react-icons/io";
 
 export const Navber = () => {
     return (
@@ -26,7 +27,7 @@ export const Navber = () => {
                     <NavigationMenuList className="flex gap-6 items-center">
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink href="/news">Home</NavigationMenuLink>
+                            <NavigationMenuLink href="/news">News</NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
@@ -53,10 +54,24 @@ export const Navber = () => {
                 <div className="flex items-center gap-2">
                     <span className="text-sm">Dark mode</span>
                     <Switch />
-                    <div>
+                    <div className='hidden lg:block'>
                         <Button variant="default">Login</Button>
                     </div>
+
+
+
+
                 </div>
+
+
+                    {/* mobile navber */}
+
+                    <div className='lg:hidden '>
+                        <Button>
+                            <IoMdMenu />
+                        </Button>
+
+                    </div>
 
             </nav>
         </header>
