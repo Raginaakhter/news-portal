@@ -7,3 +7,6 @@
     url: string;
     thumbnailUrl: string;
 }
+export interface newsdataProps{
+    item:NewsItem;
+ }

@@ -1,10 +1,10 @@
 import NewsCard from "@/components/newsCard";
 import Bannerpage from "@/components/shared/Banner";
-import { NewsItem } from "./news";
+import { newsdataProps, NewsItem } from "./news";
 
 
 
-export default async function Home(item: NewsItem) {
+export default async function Home({ item }: newsdataProps) {
 
 const data = await fetch('https://jsonplaceholder.typicode.com/photos')
 const news = await data.json();
@@ -22,7 +22,7 @@ console.log(news);
 <h2 className="text-2xl font-bold">Latest News</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
 {
-  news.map((item: NewsItem) => (
+  news.slice(0,3).map((item: NewsItem) => (
     <NewsCard key={item?.id} item ={item} />
   ))
 }
