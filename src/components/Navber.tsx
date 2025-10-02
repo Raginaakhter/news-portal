@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
 import {
@@ -11,8 +12,11 @@ import {
 import { Switch } from './ui/switch'
 import { Button } from "@/components/ui/button"
 import { IoMdMenu } from "react-icons/io";
+import { usePathname } from 'next/navigation'
 
 export const Navber = () => {
+
+    const pathname = usePathname();
     return (
         <header className="shadow-sm border-b">
             <nav className="max-w-7xl mx-auto flex items-center justify-between p-4 font-bold text-lg">
@@ -27,7 +31,7 @@ export const Navber = () => {
                     <NavigationMenuList className="flex gap-6 items-center">
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink href="/news">News</NavigationMenuLink>
+                            <NavigationMenuLink className={`${pathname === "/news" ? "text-blue-500" : ""} hover:bg-gray-100`} href="/news">News</NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
@@ -40,11 +44,11 @@ export const Navber = () => {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink href="/about">About</NavigationMenuLink>
+                            <NavigationMenuLink className={`${pathname === "/about" ? "text-blue-500" : ""}`} href="/about">About</NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
+                            <NavigationMenuLink className={`${pathname === "/contact" ? "text-blue-500" : ""}`} href="/contact">Contact</NavigationMenuLink>
                         </NavigationMenuItem>
 
                     </NavigationMenuList>
