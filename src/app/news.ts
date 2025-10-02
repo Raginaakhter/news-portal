@@ -1,12 +1,13 @@
 
-
- export interface NewsItem {
-    albumId: number;
-    id: number;
-    title: string;
-    url: string;
-    thumbnailUrl: string;
+export interface NewsItem {
+  albumId: number;
+  price: number;
+  title: string;
+  image: string;      
+  description: string;
 }
-export interface newsdataProps{
-    item:NewsItem;
- }
+
+
+export interface NewsDataProps {
+  item: NewsItem;
+}
