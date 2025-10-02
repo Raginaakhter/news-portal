@@ -37,9 +37,9 @@ export const Navber = () => {
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                             <NavigationMenuContent className="flex flex-col space-y-2 p-4">
-                                <NavigationMenuLink href="/services/app">Mobile Development</NavigationMenuLink>
-                                <NavigationMenuLink href="/services/web">Web Development</NavigationMenuLink>
-                                <NavigationMenuLink href="/services/seo">SEO</NavigationMenuLink>
+                                <NavigationMenuLink className={`${pathname === "/services/app" ? "text-blue-500" : ""}`} href="/services/app">Mobile Development</NavigationMenuLink>
+                                <NavigationMenuLink className={`${pathname === "/services/web" ? "text-blue-500" : ""}`} href="/services/web">Web Development</NavigationMenuLink>
+                                <NavigationMenuLink className={`${pathname === "/services/seo" ? "text-blue-500" : ""}`} href="/services/seo">SEO</NavigationMenuLink>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
 
