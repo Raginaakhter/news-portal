@@ -1,16 +1,16 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
-
+import img from './../../../public/img-4.jpg'
 
 const Bannerpage = () => {
     return (
         <div className='bg-slate-100  '>
 
 
-            <div className=' grid grid-cols-2 sm:grid-col lg:grid-cols-2 items-center gap-8'>
-                <div className='P-8 '>
-                  <Image src="/openai.jpg" alt='banner' width={600} height={400} className='rounded-lg shadow-lg' />
+            <div className=' grid grid-cols-2 sm: grid-col lg:grid-cols-2 items-center gap-8'>
+                <div className=' mx-auto'>
+                  <Image src={img} alt='banner' width={600} height={400} className='rounded-lg shadow-lg ' />
                 </div>
 
                 <div className='space-y-4 flex flex-col p-5 lg:px-8'>
